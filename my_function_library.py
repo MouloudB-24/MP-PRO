@@ -1,5 +1,5 @@
 """---------------------- Nettoyage des données -------------------"""
-# Fonction pour détecter les OUTLIERS
+# Fonction pour détecter les OUTLIERS avec la méthode IQR
 def iqr_outlier_detection(df, feature, threshold=1.5):
     q1 = df[feature].quantile(0.25)
     q3 = df[feature].quantile(0.75)
