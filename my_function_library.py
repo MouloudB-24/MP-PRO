@@ -8,4 +8,7 @@ def iqr_outlier_detection(df, feature, threshold=1.5):
     lower_bound = q1 - threshold * iqr
     upper_bound = q3 + threshold * iqr
 
-    return df.query(f"{feature} < {lower_bound} | {feature} > {upper_bound}")
+    outliers = df.query(f"{feature} < {lower_bound} | {feature} > {upper_bound}")
+    df_cleaned = df.query(f"{feature} >= {lower_bound} | {feature} <= {upper_bound}")
+
+    return outliers, df_cleaned
