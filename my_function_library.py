@@ -1,19 +1,28 @@
-"""---------------------- Nettoyage des données -------------------"""
+"""---------------------- Nettoyage des données  ------------------------------------------"""
 # Fonction pour détecter les OUTLIERS avec la méthode IQR
 def iqr_outlier_detection(df, feature, threshold=1.5):
     q1 = df[feature].quantile(0.25)
     q3 = df[feature].quantile(0.75)
     iqr = q3 - q1
-
     lower_bound = q1 - threshold * iqr
     upper_bound = q3 + threshold * iqr
-
     outliers = df.query(f"{feature} < {lower_bound} | {feature} > {upper_bound}")
     df_cleaned = df.query(f"{feature} >= {lower_bound} | {feature} <= {upper_bound}")
 
     return outliers, df_cleaned
 
+# Fonction pour détecter les OUTLIERS avec la méthode LOF
+def detect_outlier(df, var1, var2):
+    data = np.array(df[[var1, var2]])
+    outlier_model = LocalOutlierFactor(contamination=0.0015, n_neighbors=5)
+    outliers = outlier_model.fit_predict(data)
+    df_clean = df[outliers==1]
+    df_out = df[outliers==-1]
+    fig = plt.scatter(df[var1], df[var2], c=outliers, cmap="bwr_r")
+    return fig, df_clean, df_out
 
+
+"""---------------------- Heatmap ---------------------------------------------- """
 # Heat map
 def get_corr_matrix_and_heatmap(df):
 
