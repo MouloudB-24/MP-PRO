@@ -5,3 +5,5 @@ pyproject.toml
 mod*
 exos*
 others
+.DS_Store
+graphs.webp
