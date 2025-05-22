@@ -2,3 +2,6 @@ poetry.lock
 programme-d-entrainnemen-python
 .python-version
 pyproject.toml
+mod*
+exos*
+others

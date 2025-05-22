@@ -1,0 +1,16 @@
+• OverallQual : Qualité globale des matériaux et de la finition. Souvent très corrélé au prix de vente. (note sur 10, entier)
+• GrLivArea : Surface habitable hors sous-sol. Directement liée à la taille de la maison.
+• TotalBsmtSF : Superficie totale du sous-sol. Ajoute une grande valeur à la propriété.
+• 1stFlrSF : Superficie du rez-de-chaussée. Indique la taille de la maison.
+• YearBuilt : Année de construction. Les maisons plus récentes ont tendance à se vendre à un prix plus élevé.
+• YearRemodAdd : Année de rénovation. Les rénovations récentes peuvent augmenter le prix.
+• GarageCars : Capacité du garage en nombre de voitures. Un élément clé pour de nombreux acheteurs.
+• GarageArea : Taille du garage en pieds carrés.
+• FullBath : Nombre de salles de bains complètes. Un facteur important pour le confort de la maison.
+• TotRmsAbvGrd : Nombre total de pièces au-dessus du sol (hors salles de bains). Plus il y a de pièces, plus le bien est généralement cher.
+• KitchenQual : Qualité de la cuisine. Une cuisine de haute qualité ajoute une grande valeur.
+• Fireplaces : Nombre de cheminées. Une caractéristique qui peut augmenter l'attrait et la valeur d'une propriété.
+• LotArea : Surface totale du terrain. La taille du lot est un facteur important, notamment dans les zones urbaines.
+• Neighborhood : Emplacement physique au sein des limites de la ville. L'emplacement a un impact majeur sur les prix de l'immobilier.
+• ExterQual : Qualité du matériau extérieur. Un indicateur de la qualité globale de la maison.
+• SalePrice : Prix de vente de la maison. C'est la variable cible que nous devons prédire.
