@@ -6,3 +6,4 @@ mod*
 others
 .DS_Store
 graphs.webp
+.ipynb*
