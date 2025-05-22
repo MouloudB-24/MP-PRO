@@ -3,7 +3,6 @@ programme-d-entrainnemen-python
 .python-version
 pyproject.toml
 mod*
-exos*
 others
 .DS_Store
 graphs.webp
